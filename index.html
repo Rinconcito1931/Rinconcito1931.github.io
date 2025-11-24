@@ -40,6 +40,13 @@
       height: 100%;
       object-fit: cover; /* Hace que el video llene toda la pantalla */
     }
+    @media (max-width: 600px) {
+  video {
+    width: 60vw;   /* más pequeño */
+    height: auto;  /* mantiene proporción */
+    object-fit: contain;
+  }
+}
 
   </style>
 </head>
