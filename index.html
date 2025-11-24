@@ -9,68 +9,34 @@
     body {
       margin: 0;
       background: #f9f9f9;
-      color: #333;
-      font-family: Arial, sans-serif;
-      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      text-align: center;
+      height: 100vh;
     }
 
-    /* VIDEO DEL LOGO */
-    .video-logo {
-      width: 150px;     /* puedes cambiar tamaño */
+    video {
+      width: 200px;     /* puedes cambiar tamaño */
       height: auto;
-      margin-bottom: 20px;
-      border-radius: 10px; /* opcional */
-    }
-
-    /* Texto "Cargando" */
-    .texto {
-      font-size: 22px;
-      color: #0D596A;
-      font-weight: bold;
-      animation: fade 1.2s infinite alternate;
-    }
-
-    /* Efecto parpadeo */
-    @keyframes fade {
-      from { opacity: 1; }
-      to   { opacity: 0.3; }
-    }
-
-    /* Animación de puntos */
-    .texto::after {
-      content: "...";
-      animation: dots 1.5s steps(3,end) infinite;
-    }
-
-    @keyframes dots {
-      0%   { content: ""; }
-      33%  { content: "."; }
-      66%  { content: ".."; }
-      100% { content: "..."; }
+      border-radius: 12px; /* opcional */
     }
   </style>
 
   <script>
-    // Redirige al index después de 3 segundos
+    // Redirige al index después de 5 segundos
     setTimeout(() => {
-      window.location.href = "index.html";
-    }, 3000);
+      window.location.href = "pagina.html";
+    }, 5000);
   </script>
 </head>
 <body>
 
-  <!-- VIDEO que se reproduce automáticamente -->
-  <video class="video-logo" autoplay muted playsinline>
+  <!-- VIDEO -->
+  <video autoplay muted playsinline>
     <source src="imagenes/video.mp4" type="video/mp4">
     Tu navegador no soporta videos.
   </video>
 
-  <div class="texto">Cargando</div>
-
 </body>
 </html>
+
