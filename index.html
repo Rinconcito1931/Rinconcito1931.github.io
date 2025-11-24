@@ -19,23 +19,43 @@
       text-align: center;
     }
 
-    /* GIF */
+    /* GIF del logo */
     .gif-logo {
       width: 120px;
       height: auto;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
-    /* Texto */
+    /* Texto base */
     .texto {
-      font-size: 20px;
+      font-size: 22px;
       color: #0D596A;
       font-weight: bold;
+      animation: fade 1.2s infinite alternate;
+    }
+
+    /* Efecto parpadeo */
+    @keyframes fade {
+      from { opacity: 1; }
+      to   { opacity: 0.3; }
+    }
+
+    /* Animación de puntos (...) */
+    .texto::after {
+      content: "...";
+      animation: dots 1.5s steps(3,end) infinite;
+    }
+
+    @keyframes dots {
+      0%   { content: ""; }
+      33%  { content: "."; }
+      66%  { content: ".."; }
+      100% { content: "..."; }
     }
   </style>
 
   <script>
-    // Redirige en 3 segundos
+    // Redirige al index después de 3 segundos
     setTimeout(() => {
       window.location.href = "pagina.html";
     }, 3000);
@@ -43,10 +63,10 @@
 </head>
 <body>
 
-  <!-- Aquí colocas tu GIF -->
-  <img src="imagenes/tu-gif.gif" class="gif-logo" alt="Cargando">
+  <!-- Aquí colocas tu GIF/logo -->
+  <img src="imagenes/tu-gif.gif" class="gif-logo" alt="Logo cargando">
 
-  <div class="texto">Cargando...</div>
+  <div class="texto">Cargando</div>
 
 </body>
 </html>
