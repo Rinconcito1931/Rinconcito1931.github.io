@@ -6,46 +6,40 @@
   <title>Cargando...</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body, html {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: black;
-    }
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+}
 
-    /* Contenedor que hará fade-out */
-    #fade {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: black;
-      transition: opacity 1.5s ease; /* fade-out */
-      opacity: 1;
-    }
+/* Contenedor con fade-out */
+#fade {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  transition: opacity 1.5s ease;
+  opacity: 1;
+}
 
-    /* Video fullscreen */
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Hace que el video llene toda la pantalla */
-    }
-    @media (max-width: 600px) {
-  video {
-    width: 60vw;   /* más pequeño */
-    height: auto;  /* mantiene proporción */
-    object-fit: contain;
-  }
+/* ❤️ Tamaño ideal para teléfonos */
+video {
+  width: 70vw;      /* video más pequeño y centrado */
+  height: auto;     /* mantiene proporción */
+  max-height: 60vh; /* evita que se haga muy alto */
+  object-fit: contain;
 }
 
   </style>
