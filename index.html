@@ -19,14 +19,15 @@
       text-align: center;
     }
 
-    /* GIF del logo */
-    .gif-logo {
-      width: 120px;
+    /* VIDEO DEL LOGO */
+    .video-logo {
+      width: 150px;     /* puedes cambiar tamaño */
       height: auto;
       margin-bottom: 20px;
+      border-radius: 10px; /* opcional */
     }
 
-    /* Texto base */
+    /* Texto "Cargando" */
     .texto {
       font-size: 22px;
       color: #0D596A;
@@ -40,7 +41,7 @@
       to   { opacity: 0.3; }
     }
 
-    /* Animación de puntos (...) */
+    /* Animación de puntos */
     .texto::after {
       content: "...";
       animation: dots 1.5s steps(3,end) infinite;
@@ -57,14 +58,17 @@
   <script>
     // Redirige al index después de 3 segundos
     setTimeout(() => {
-      window.location.href = "pagina.html";
+      window.location.href = "index.html";
     }, 3000);
   </script>
 </head>
 <body>
 
-  <!-- Aquí colocas tu GIF/logo -->
-  <img src="imagenes/video.mp4" class="gif-logo" alt="Logo cargando">
+  <!-- VIDEO que se reproduce automáticamente -->
+  <video class="video-logo" autoplay muted playsinline>
+    <source src="imagenes/video.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
 
   <div class="texto">Cargando</div>
 
