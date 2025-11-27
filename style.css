@@ -5,14 +5,13 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
 }
 
-/* Contenedor principal que iguala todo el ancho */
+/* Contenedor general */
 .contenedor {
   width: 95%;
-  max-width: 550px;   /* 🔹 mismo ancho que productos */
+  max-width: 550px;
+  margin: 0 auto;
   padding: 20px 0;
 }
 
@@ -23,10 +22,8 @@ header {
   background: #0D596A;
   padding: 25px;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px; /* 🔹 separa del contenido */
   color: white;
-
-  /* hace visualmente más grande el encabezado */
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
@@ -40,8 +37,8 @@ header {
 
 /* --- LOGO --- */
 .logo img {
-  height: 70px;        /* 🔹 más grande */
-  width: 70px;         /* 🔹 cuadrado como imagen de producto */
+  height: 70px;
+  width: 70px;
   object-fit: cover;
   border-radius: 10px;
   background: white;
@@ -55,10 +52,10 @@ header {
 
 .btn {
   text-decoration: none;
-  padding: 10px 14px;   /* 🔹 Más grandes */
+  padding: 10px 14px;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 16px;      /* 🔹 Más grande */
+  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -80,7 +77,7 @@ header {
 #buscador {
   margin-top: 15px;
   padding: 12px;
-  width: 100%;           /* 🔹 ocupa lo mismo que la lista */
+  width: 100%;
   font-size: 16px;
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -108,7 +105,7 @@ ul {
 
 li {
   display: flex;
-  align-items: center;   /* 🔹 Alinea imagen + texto */
+  align-items: center;
   justify-content: space-between;
   padding: 8px 0;
   border-bottom: 1px dashed #ccc;
@@ -116,7 +113,7 @@ li {
 
 /* --- IMAGEN PRODUCTO --- */
 .producto-img {
-  width: 55px;      /* 🔹 tamaño base al que ajusté todo */
+  width: 55px;
   height: 55px;
   object-fit: cover;
   border-radius: 8px;
