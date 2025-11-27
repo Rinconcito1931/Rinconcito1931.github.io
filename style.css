@@ -1,19 +1,29 @@
+/* ------------------------------------- */
+/*            ESTILOS GENERALES          */
+/* ------------------------------------- */
+
 body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 0;           /* ajustado para pantalla completa */
 }
 
-/* Encabezado */
+
+/* ------------------------------------- */
+/*                 HEADER                */
+/* ------------------------------------- */
+
 header {
   text-align: center;
-  background: #0D596A;   /* 🔹 antes estaba amarillo */
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  background: #0D596A;
+  padding: 20px 10px;
+  border-radius: 0 0 10px 10px;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 /* Barra superior */
@@ -21,18 +31,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  padding: 0 5px;
 }
 
 /* Logo */
 .logo img {
-  height: 60px;
-  width: auto;
+  width: 70px;
+  height: auto;
   border-radius: 10px;
-  background: white; /* opcional para que resalte */
+  background: white;
 }
 
-/* Botones de contacto */
+/* Botones */
 .contacto {
   display: flex;
   gap: 10px;
@@ -41,9 +52,9 @@ header {
 .btn {
   text-decoration: none;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1rem;
   transition: 0.3s;
 }
 
@@ -61,51 +72,122 @@ header {
   opacity: 0.8;
 }
 
-/* Buscador */
-#buscador {
-  margin-top: 15px;
-  padding: 10px;
-  width: 80%;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
+/* Título */
+h1 {
+  margin: 10px 0 0 0;
+  font-size: 1.9rem;
 }
 
-/* Categorías */
+p {
+  margin: 5px 0 15px 0;
+  font-size: 1.1rem;
+}
+
+/* Buscador */
+#buscador {
+  margin-top: 10px;
+  padding: 12px;
+  width: 90%;
+  max-width: 450px;
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+
+/* ------------------------------------- */
+/*              CATEGORÍAS               */
+/* ------------------------------------- */
+
 .categoria {
-  margin-bottom: 30px;
+  background: white;
+  margin: 15px auto;
+  padding: 15px;
+  width: 95%;
+  max-width: 650px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
 }
 
 .categoria h2 {
-  background: #0D596A;   /* 🔹 antes estaba amarillo */
+  background: #0D596A;
   color: white;
   padding: 10px;
   border-radius: 5px;
+  font-size: 1.4rem;
 }
 
+/* Lista */
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
   display: flex;
   justify-content: space-between;
-  padding: 5px 0;
+  align-items: center;
+  padding: 12px 0;
   border-bottom: 1px dashed #ccc;
+  font-size: 1.2rem;
 }
 
+/* Imagen de producto */
+.producto-img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Precio */
 .precio {
   font-weight: bold;
   color: #008000;
+  font-size: 1.2rem;
 }
 
-/* Imagen productos */
-.producto-img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-right: 8px;
-  vertical-align: middle;
+
+/* ------------------------------------- */
+/*     OPTIMIZACIÓN PARA COMPUTADORA     */
+/* ------------------------------------- */
+
+@media (min-width: 700px) {
+
+  header {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  #buscador {
+    font-size: 1.2rem;
+    padding: 14px;
+  }
+
+  .categoria {
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .categoria h2 {
+    font-size: 1.6rem;
+  }
+
+  li {
+    font-size: 1.3rem;
+  }
+
+  .producto-img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .precio {
+    font-size: 1.3rem;
+  }
 }
