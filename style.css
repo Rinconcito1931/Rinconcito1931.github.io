@@ -1,49 +1,53 @@
-/* ------------------------------------- */
-/*            ESTILOS GENERALES          */
-/* ------------------------------------- */
-
+/* --- BASE GENERAL --- */
 body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   color: #333;
   margin: 0;
-  padding: 0;           /* ajustado para pantalla completa */
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
+/* Contenedor principal que iguala todo el ancho */
+.contenedor {
+  width: 95%;
+  max-width: 550px;   /* 🔹 mismo ancho que productos */
+  padding: 20px 0;
+}
 
-/* ------------------------------------- */
-/*                 HEADER                */
-/* ------------------------------------- */
-
+/* --- ENCABEZADO --- */
 header {
+  width: 100%;
   text-align: center;
   background: #0D596A;
-  padding: 20px 10px;
-  border-radius: 0 0 10px 10px;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
   color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+
+  /* hace visualmente más grande el encabezado */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
-/* Barra superior */
+/* --- BARRA SUPERIOR --- */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 0 5px;
+  margin-bottom: 15px;
 }
 
-/* Logo */
+/* --- LOGO --- */
 .logo img {
-  width: 70px;
-  height: auto;
+  height: 70px;        /* 🔹 más grande */
+  width: 70px;         /* 🔹 cuadrado como imagen de producto */
+  object-fit: cover;
   border-radius: 10px;
   background: white;
 }
 
-/* Botones */
+/* --- BOTONES CONTACTO --- */
 .contacto {
   display: flex;
   gap: 10px;
@@ -51,10 +55,10 @@ header {
 
 .btn {
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 10px 14px;   /* 🔹 Más grandes */
   border-radius: 8px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 16px;      /* 🔹 Más grande */
   transition: 0.3s;
 }
 
@@ -69,125 +73,59 @@ header {
 }
 
 .btn:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* Título */
-h1 {
-  margin: 10px 0 0 0;
-  font-size: 1.9rem;
-}
-
-p {
-  margin: 5px 0 15px 0;
-  font-size: 1.1rem;
-}
-
-/* Buscador */
+/* --- BUSCADOR --- */
 #buscador {
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 12px;
-  width: 90%;
-  max-width: 450px;
-  font-size: 1.1rem;
+  width: 100%;           /* 🔹 ocupa lo mismo que la lista */
+  font-size: 16px;
   border: 2px solid #ccc;
   border-radius: 8px;
 }
 
-
-/* ------------------------------------- */
-/*              CATEGORÍAS               */
-/* ------------------------------------- */
-
+/* --- CATEGORÍAS --- */
 .categoria {
-  background: white;
-  margin: 15px auto;
-  padding: 15px;
-  width: 95%;
-  max-width: 650px;
-  border-radius: 15px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .categoria h2 {
   background: #0D596A;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 1.4rem;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 20px;
 }
 
-/* Lista */
+/* --- LISTA PRODUCTOS --- */
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 li {
   display: flex;
+  align-items: center;   /* 🔹 Alinea imagen + texto */
   justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
+  padding: 8px 0;
   border-bottom: 1px dashed #ccc;
-  font-size: 1.2rem;
 }
 
-/* Imagen de producto */
+/* --- IMAGEN PRODUCTO --- */
 .producto-img {
-  width: 55px;
+  width: 55px;      /* 🔹 tamaño base al que ajusté todo */
   height: 55px;
   object-fit: cover;
   border-radius: 8px;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 
-/* Precio */
+/* precio */
 .precio {
   font-weight: bold;
   color: #008000;
-  font-size: 1.2rem;
-}
-
-
-/* ------------------------------------- */
-/*     OPTIMIZACIÓN PARA COMPUTADORA     */
-/* ------------------------------------- */
-
-@media (min-width: 700px) {
-
-  header {
-    padding: 25px 20px;
-  }
-
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  #buscador {
-    font-size: 1.2rem;
-    padding: 14px;
-  }
-
-  .categoria {
-    max-width: 800px;
-    padding: 20px;
-  }
-
-  .categoria h2 {
-    font-size: 1.6rem;
-  }
-
-  li {
-    font-size: 1.3rem;
-  }
-
-  .producto-img {
-    width: 65px;
-    height: 65px;
-  }
-
-  .precio {
-    font-size: 1.3rem;
-  }
 }
